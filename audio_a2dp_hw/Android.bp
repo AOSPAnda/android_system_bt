@@ -29,6 +29,7 @@ cc_library {
     ],
     shared_libs: [
         "liblog",
+        "libbase",
         "libcutils",
     ],
     static_libs: ["libosi"],
