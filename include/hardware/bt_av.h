@@ -127,7 +127,7 @@ typedef enum {
  * For codec capability, fields "sample_rate", "bits_per_sample" and
  * "channel_mode" can contain bit-masks with all supported features.
  */
-typedef struct {
+struct btav_a2dp_codec_config_t {
   btav_a2dp_codec_index_t codec_type;
   btav_a2dp_codec_priority_t
       codec_priority;  // Codec selection priority
@@ -253,12 +253,12 @@ typedef struct {
     result += name;
     return result;
   }
-} btav_a2dp_codec_config_t;
+};
 
-typedef struct {
+struct btav_a2dp_scmst_info_t {
   btav_a2dp_scmst_enable_status_t enable_status;
   uint8_t cp_header;
-} btav_a2dp_scmst_info_t;
+};
 
 /** Callback for connection state change.
  *  state will have one of the values from btav_connection_state_t
